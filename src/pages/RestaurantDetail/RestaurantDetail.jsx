@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import data from "../../data/restaurantes.json";
+import templates from "../../data/templates.json"; // ✅ importamos templates
 import { Container, Row, Col, Button, ListGroup, Form } from "react-bootstrap";
 import { QRCodeCanvas } from "qrcode.react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -105,7 +106,7 @@ function RestaurantDetail() {
             )}
           </div>
 
-          {/* Selector de template */}
+          {/* Selector de template dinámico */}
           <div className="mt-4">
             <Form.Group controlId="templateSelect">
               <Form.Label>
@@ -115,9 +116,11 @@ function RestaurantDetail() {
                 value={selectedTemplate}
                 onChange={(e) => setSelectedTemplate(e.target.value)}
               >
-                <option value="classic">Classic</option>
-                <option value="modern">Modern</option>
-                <option value="elegant">Elegant</option>
+                {templates.map((tpl) => (
+                  <option key={tpl.id} value={tpl.id}>
+                    {tpl.nombre} — {tpl.descripcion}
+                  </option>
+                ))}
               </Form.Select>
             </Form.Group>
           </div>

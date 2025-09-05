@@ -2,9 +2,7 @@ import React from "react";
 import { useParams, useLocation } from "react-router-dom";
 import data from "../../data/restaurantes.json";
 import { Container } from "react-bootstrap";
-import MenuClassic from "../../components/MenuTemplates/MenuClassic.jsx";
-import MenuModern from "../../components/MenuTemplates/MenuModern.jsx";
-import MenuElegant from "../../components/MenuTemplates/MenuElegant.jsx";
+import { templates } from "../../components/MenuTemplates";
 
 function RestaurantMenu() {
   const { slug } = useParams();
@@ -16,27 +14,19 @@ function RestaurantMenu() {
     return <h2 className="text-center py-5">Restaurante no encontrado</h2>;
   }
 
-  // 🔎 leer el template desde la URL (?template=...)
   const params = new URLSearchParams(location.search);
   const templateParam = params.get("template");
-
-  // si hay param en la URL, lo usamos; si no, usamos el que está en JSON
   const templateToUse = templateParam || restaurante.template;
+
+  // buscar el componente según el template
+  const TemplateComponent = templates[templateToUse] || templates["classic"];
 
   return (
     <Container className="py-5">
       <h1 className="mb-4 text-center">{restaurante.nombre}</h1>
       <p className="text-center text-muted mb-5">{restaurante.tagline}</p>
 
-      {templateToUse === "classic" && (
-        <MenuClassic productos={restaurante.productos} />
-      )}
-      {templateToUse === "modern" && (
-        <MenuModern productos={restaurante.productos} />
-      )}
-      {templateToUse === "elegant" && (
-        <MenuElegant productos={restaurante.productos} />
-      )}
+      <TemplateComponent productos={restaurante.productos} />
     </Container>
   );
 }
