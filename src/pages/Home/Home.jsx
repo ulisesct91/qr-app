@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import data from "../../data/restaurantes.json";
-import { Container, Table, Button } from "react-bootstrap";
+import { Container, Table, Button, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import LogoutButton from "../../components/LogoutButton"; // 👈 importar botón
 
 function Home() {
   return (
     <Container className="py-5">
-      <h1 className="mb-4 text-center">
-        <FontAwesomeIcon icon={faUtensils} className="me-2 text-primary" />
-        Restaurantes
-      </h1>
+      {/* Encabezado con título y botón logout */}
+      <Row className="mb-4">
+        <Col className="d-flex justify-content-between align-items-center">
+          <h1 className="mb-0">
+            <FontAwesomeIcon icon={faUtensils} className="me-2 text-primary" />
+            Restaurantes
+          </h1>
+          <LogoutButton /> {/* 👈 aquí agregamos el botón */}
+        </Col>
+      </Row>
 
+      {/* Tabla de restaurantes */}
       <div className="table-responsive">
         <Table striped bordered hover className="align-middle">
           <thead className="table-dark text-center">

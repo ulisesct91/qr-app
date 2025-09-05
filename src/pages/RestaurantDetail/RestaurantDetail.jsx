@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import data from "../../data/restaurantes.json";
-import templates from "../../data/templates.json"; // ✅ importamos templates
+import templates from "../../data/templates.json";
 import { Container, Row, Col, Button, ListGroup, Form } from "react-bootstrap";
 import { QRCodeCanvas } from "qrcode.react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,12 +17,12 @@ import {
   faFacebook,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import LogoutButton from "../../components/LogoutButton"; // 👈 botón logout
 
 function RestaurantDetail() {
   const { slug } = useParams();
   const restaurante = data.find((r) => r.slug === slug);
 
-  // estado local para template seleccionado
   const [selectedTemplate, setSelectedTemplate] = useState(
     restaurante?.template || "classic"
   );
@@ -35,6 +35,14 @@ function RestaurantDetail() {
 
   return (
     <Container className="py-5">
+      {/* Encabezado con nombre + logout */}
+      <Row className="mb-4">
+        <Col className="d-flex justify-content-between align-items-center">
+          <h1 className="mb-0">{restaurante.nombre}</h1>
+          <LogoutButton /> {/* 👈 botón de cerrar sesión */}
+        </Col>
+      </Row>
+
       <Row className="mb-4">
         <Col md={4} className="text-center">
           <img
@@ -44,7 +52,6 @@ function RestaurantDetail() {
           />
         </Col>
         <Col md={8}>
-          <h1>{restaurante.nombre}</h1>
           <p className="text-muted">{restaurante.tagline}</p>
 
           <ListGroup variant="flush">
@@ -73,6 +80,7 @@ function RestaurantDetail() {
             </ListGroup.Item>
           </ListGroup>
 
+          {/* Redes sociales */}
           <div className="mt-3">
             {restaurante.redes.instagram && (
               <a
@@ -127,13 +135,13 @@ function RestaurantDetail() {
         </Col>
       </Row>
 
+      {/* QR y botón para ver menú */}
       <Row className="mt-5">
         <Col md={6} className="text-center">
           <h4>
             <FontAwesomeIcon icon={faQrcode} className="me-2" />
             Escanea el QR
           </h4>
-          {/* El QR apunta al menú con el template seleccionado */}
           <QRCodeCanvas
             value={`${menuUrl}?template=${selectedTemplate}`}
             size={200}
