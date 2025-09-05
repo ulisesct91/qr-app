@@ -4,10 +4,7 @@ import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 // Lista blanca de correos autorizados
-const allowedEmails = [
-  "ulisesct91@gmail.com",
-  "david.toscanoruiz@gmail.com@gmail.com",
-];
+const allowedEmails = ["ulisesct91@gmail.com", "david.toscanoruiz@gmail.com"];
 
 function PrivateRoute({ children }) {
   const [user, loading] = useAuthState(auth);
