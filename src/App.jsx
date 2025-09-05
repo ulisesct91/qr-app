@@ -1,46 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DashboardPage from "./pages/DashboardPage";
-import LoginPage from "./pages/LoginPage";
-import RestaurantsPage from "./pages/RestaurantsPage";
-import PrivateRoute from "./components/PrivateRoute";
-import RestaurantDetailsPage from "./pages/RestaurantDetailsPage";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Páginas
+import Home from "./pages/Home/Home.jsx";
+import RestaurantDetail from "./pages/RestaurantDetail/RestaurantDetail.jsx";
+import RestaurantMenu from "./pages/RestaurantMenu/RestaurantMenu.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
+        {/* Lista de restaurantes */}
+        <Route path="/" element={<Home />} />
 
-        {/* Rutas privadas */}
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <DashboardPage />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/restaurants"
-          element={
-            <PrivateRoute>
-              <RestaurantsPage />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/restaurants/:id"
-          element={
-            <PrivateRoute>
-              <RestaurantDetailsPage />
-            </PrivateRoute>
-          }
-        />
+        {/* Vista de detalles de un restaurante */}
+        <Route path="/restaurante/:slug" element={<RestaurantDetail />} />
 
-        {/* Default */}
-        <Route path="*" element={<LoginPage />} />
+        {/* Vista del menú de un restaurante */}
+        <Route path="/menu/:slug" element={<RestaurantMenu />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "nombre": "Burger House",
+    "slug": "burger-house",
+    "categoria": "Hamburguesas",
+    "template": "classic",
+    "media": {
+      "logo": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "banner": "https://images.unsplash.com/photo-1550547660-20f9c7f0c047",
+      "galeria": [
+        "https://images.unsplash.com/photo-1550547660-d9450f859349",
+        "https://images.unsplash.com/photo-1550547660-20f9c7f0c047"
+      ]
+    },
+    "redes": {
+      "instagram": "https://instagram.com/burgerhouse",
+      "facebook": "https://facebook.com/burgerhouse"
+    },
+    "sucursales": [
+      {
+        "direccion": "Av. Libertad 101, Guadalajara, Jalisco",
+        "telefono": "+52 33 5555 1111",
+        "whatsapp": "+52 33 5555 2222",
+        "google_maps": "https://maps.google.com/?q=20.673,-103.344",
+        "horario": {
+          "lunes_domingo": "12:00 pm - 11:00 pm"
+        }
+      }
+    ],
+    "metodos_pago": ["Efectivo", "Tarjeta"],
+    "tagline": "Las hamburguesas más jugosas de la ciudad",
+    "encargado": {
+      "nombre": "Pedro González",
+      "telefono": "+52 33 9999 8888"
+    },
+    "productos": [
+      {
+        "categoria": "Hamburguesas",
+        "items": [
+          {
+            "nombre": "Classic Burger",
+            "descripcion": "Carne de res, queso cheddar, lechuga y jitomate",
+            "precio": 120,
+            "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349"
+          },
+          {
+            "nombre": "BBQ Burger",
+            "descripcion": "Carne de res con salsa BBQ y aros de cebolla",
+            "precio": 140,
+            "imagen": "https://images.unsplash.com/photo-1603066276411-61da9b35e66e"
+          }
+        ]
+      },
+      {
+        "categoria": "Bebidas",
+        "items": [
+          {
+            "nombre": "Refresco",
+            "descripcion": "Coca Cola, Pepsi, Sprite",
+            "precio": 30,
+            "imagen": "https://images.unsplash.com/photo-1561047029-3000e62f07ae"
+          },
+          {
+            "nombre": "Malteada",
+            "descripcion": "Vainilla, chocolate o fresa",
+            "precio": 60,
+            "imagen": "https://images.unsplash.com/photo-1617196035488-0b6a38c41952"
+          }
+        ]
+      }
+    ],
+    "estatus": "activo",
+    "plan": "premium",
+    "fecha_registro": "2025-09-06"
+  },
+  {
+    "id": 2,
+    "nombre": "Sushi World",
+    "slug": "sushi-world",
+    "categoria": "Japonesa",
+    "template": "modern",
+    "media": {
+      "logo": "https://images.unsplash.com/photo-1606787366850-de6330128bfc",
+      "banner": "https://images.unsplash.com/photo-1606788075761-9beae5f8e9f4",
+      "galeria": []
+    },
+    "redes": {
+      "instagram": "https://instagram.com/sushiworld",
+      "facebook": "https://facebook.com/sushiworld"
+    },
+    "sucursales": [
+      {
+        "direccion": "Calle Japón 202, Col. Centro, CDMX",
+        "telefono": "+52 55 1234 5678",
+        "whatsapp": "+52 55 8765 4321",
+        "google_maps": "https://maps.google.com/?q=19.432,-99.133",
+        "horario": {
+          "lunes_sabado": "1:00 pm - 10:00 pm",
+          "domingo": "Cerrado"
+        }
+      }
+    ],
+    "metodos_pago": ["Efectivo", "Tarjeta", "Apple Pay"],
+    "tagline": "Sushi fresco todos los días",
+    "encargado": {
+      "nombre": "Akira Tanaka",
+      "telefono": "+52 55 1111 2222"
+    },
+    "productos": [
+      {
+        "categoria": "Rollos",
+        "items": [
+          {
+            "nombre": "California Roll",
+            "descripcion": "Aguacate, cangrejo, pepino",
+            "precio": 90,
+            "imagen": "https://images.unsplash.com/photo-1606788075761-9beae5f8e9f4"
+          },
+          {
+            "nombre": "Philadelphia Roll",
+            "descripcion": "Salmón y queso crema",
+            "precio": 110,
+            "imagen": "https://images.unsplash.com/photo-1617196035488-0b6a38c41952"
+          }
+        ]
+      },
+      {
+        "categoria": "Bebidas",
+        "items": [
+          {
+            "nombre": "Té Verde",
+            "descripcion": "Caliente o frío",
+            "precio": 40,
+            "imagen": "https://images.unsplash.com/photo-1587049352846-4e3c356ec63f"
+          }
+        ]
+      }
+    ],
+    "estatus": "activo",
+    "plan": "pro",
+    "fecha_registro": "2025-09-06"
+  }
+]

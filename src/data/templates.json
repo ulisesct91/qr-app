@@ -1,0 +1,17 @@
+[
+  {
+    "id": "classic",
+    "nombre": "Classic",
+    "descripcion": "Diseño sobrio estilo lista"
+  },
+  {
+    "id": "modern",
+    "nombre": "Modern",
+    "descripcion": "Diseño visual con tarjetas"
+  },
+  {
+    "id": "elegant",
+    "nombre": "Elegant",
+    "descripcion": "Minimalista, premium"
+  }
+]
