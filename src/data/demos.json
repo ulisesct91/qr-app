@@ -1,0 +1,115 @@
+[
+  {
+    "id": "demo-classic",
+    "nombre": "Demo Classic",
+    "slug": "demo-classic",
+    "tagline": "Ejemplo con diseño clásico tipo lista",
+    "template": "classic",
+    "productos": [
+      {
+        "categoria": "Entradas",
+        "items": [
+          {
+            "nombre": "Nachos",
+            "descripcion": "Con queso cheddar",
+            "precio": 80
+          },
+          { "nombre": "Guacamole", "descripcion": "Con totopos", "precio": 60 }
+        ]
+      },
+      {
+        "categoria": "Platos fuertes",
+        "items": [
+          {
+            "nombre": "Hamburguesa",
+            "descripcion": "Clásica con papas",
+            "precio": 120
+          },
+          {
+            "nombre": "Tacos",
+            "descripcion": "3 piezas al gusto",
+            "precio": 90
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-modern",
+    "nombre": "Demo Modern",
+    "slug": "demo-modern",
+    "tagline": "Ejemplo con diseño moderno en tarjetas",
+    "template": "modern",
+    "productos": [
+      {
+        "categoria": "Cafés",
+        "items": [
+          {
+            "nombre": "Latte",
+            "descripcion": "Espresso con leche",
+            "precio": 45
+          },
+          {
+            "nombre": "Capuccino",
+            "descripcion": "Con espuma cremosa",
+            "precio": 50
+          }
+        ]
+      },
+      {
+        "categoria": "Postres",
+        "items": [
+          {
+            "nombre": "Brownie",
+            "descripcion": "Con helado de vainilla",
+            "precio": 70
+          },
+          {
+            "nombre": "Cheesecake",
+            "descripcion": "Con salsa de frutos rojos",
+            "precio": 85
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "demo-elegant",
+    "nombre": "Demo Elegant",
+    "slug": "demo-elegant",
+    "tagline": "Ejemplo minimalista y premium",
+    "template": "elegant",
+    "productos": [
+      {
+        "categoria": "Entradas",
+        "items": [
+          {
+            "nombre": "Bruschetta",
+            "descripcion": "Pan con jitomate y albahaca",
+            "precio": 90
+          },
+          {
+            "nombre": "Carpaccio",
+            "descripcion": "Res con parmesano",
+            "precio": 150
+          }
+        ]
+      },
+      {
+        "categoria": "Platos fuertes",
+        "items": [
+          {
+            "nombre": "Spaghetti Carbonara",
+            "descripcion": "Con panceta",
+            "precio": 200
+          },
+          {
+            "nombre": "Tagliatelle al Pesto",
+            "descripcion": "Albahaca y parmesano",
+            "precio": 190
+          }
+        ]
+      }
+    ]
+  }
+]
