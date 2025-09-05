@@ -1,9 +1,10 @@
 import { Table, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function RestaurantList({ restaurants }) {
+function RestaurantList({ restaurants, onToggleStatus, onDelete }) {
   return (
     <Table striped bordered hover responsive>
-      <thead>
+      <thead className="table-dark">
         <tr>
           <th>Nombre</th>
           <th>Plan</th>
@@ -22,13 +23,22 @@ function RestaurantList({ restaurants }) {
             <td>{r.status}</td>
             <td>{r.createdAt}</td>
             <td>
-              <Button size="sm" variant="info" className="me-2">
-                Ver
+              <Link to={`/restaurants/${r.id}`}>
+                <Button size="sm" variant="info" className="me-2">
+                  Ver detalles
+                </Button>
+              </Link>
+
+              <Button
+                size="sm"
+                variant={r.status === "Activo" ? "secondary" : "success"}
+                className="me-2"
+                onClick={() => onToggleStatus(r.id)}
+              >
+                {r.status === "Activo" ? "Suspender" : "Activar"}
               </Button>
-              <Button size="sm" variant="warning" className="me-2">
-                Editar
-              </Button>
-              <Button size="sm" variant="danger">
+
+              <Button size="sm" variant="danger" onClick={() => onDelete(r.id)}>
                 Eliminar
               </Button>
             </td>

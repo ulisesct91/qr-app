@@ -3,6 +3,7 @@ import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import RestaurantsPage from "./pages/RestaurantsPage";
 import PrivateRoute from "./components/PrivateRoute";
+import RestaurantDetailsPage from "./pages/RestaurantDetailsPage";
 
 function App() {
   return (
@@ -24,6 +25,14 @@ function App() {
           element={
             <PrivateRoute>
               <RestaurantsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/restaurants/:id"
+          element={
+            <PrivateRoute>
+              <RestaurantDetailsPage />
             </PrivateRoute>
           }
         />
