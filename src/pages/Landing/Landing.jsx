@@ -2,6 +2,10 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Landing.css";
+import TemplatesCarousel from "../../components/TemplatesCarousel";
+import PlansSection from "../../components/PlansSection";
+import BenefitsSection from "../../components/BenefitsSection";
+import FinalCTA from "../../components/FinalCTA";
 
 function Landing() {
   return (
@@ -72,6 +76,10 @@ function Landing() {
           </Row>
         </Container>
       </section>
+      <TemplatesCarousel />
+      <PlansSection />
+      <BenefitsSection />
+      <FinalCTA />
     </>
   );
 }

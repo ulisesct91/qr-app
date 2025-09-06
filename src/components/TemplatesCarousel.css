@@ -1,0 +1,221 @@
+/* ===== SECTION STYLING ===== */
+.templates-carousel-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 4rem 0;
+}
+
+/* ===== HEADER ===== */
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section-title .text-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: #868e96;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ===== CAROUSEL WRAPPER ===== */
+.templates-carousel-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.templates-carousel-container {
+  overflow: hidden;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.template-carousel-item {
+  padding: 0 12px !important;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+.carousel-button-group {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.carousel-nav {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: auto;
+}
+
+.carousel-nav:hover:not(.disabled) {
+  background: #0d6efd;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
+}
+
+.carousel-nav.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== TEMPLATE CARDS ===== */
+.template-card {
+  height: 100%;
+  padding: 0;
+}
+
+.template-card-inner {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.template-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+  border-color: rgba(13, 110, 253, 0.2);
+}
+
+/* ===== IMAGE CONTAINER ===== */
+.template-image-container {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.template-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.template-card-inner:hover .template-image {
+  transform: scale(1.05);
+}
+
+/* ===== OVERLAY ===== */
+.template-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.template-card-inner:hover .template-overlay {
+  opacity: 1;
+}
+
+.preview-btn {
+  background: #2563eb !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.preview-btn:hover {
+  background: #1e4db7 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== CONTENT ===== */
+.template-content {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.template-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.template-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* ===== CTA SECTION ===== */
+.templates-cta .btn-outline-primary {
+  border: 2px solid #0d6efd !important;
+  color: #0d6efd !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
+  font-weight: 500 !important;
+}
+
+.templates-cta .btn-outline-primary:hover {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
+}
