@@ -1,16 +1,15 @@
-/* TemplatesCarousel.css - Versión mejorada */
-
 /* ===== SECTION STYLING ===== */
 .templates-carousel-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   position: relative;
+  padding: 4rem 0;
 }
 
 /* ===== HEADER ===== */
 .section-header {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
 }
 
 .section-title {
@@ -30,8 +29,8 @@
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
-  color: #6c757d;
+  font-size: 1.05rem;
+  color: #868e96;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 0;
@@ -41,13 +40,12 @@
 .templates-carousel-wrapper {
   position: relative;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1200px;
 }
 
 .templates-carousel-container {
-  overflow: hidden; /* evita desbordamiento */
-  padding: 0 40px; /* margen más limpio */
-  max-width: 1200px; /* centra y limita en pantallas grandes */
+  overflow: hidden;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -73,8 +71,8 @@
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,24 +85,15 @@
 }
 
 .carousel-nav:hover:not(.disabled) {
-  background: #ffffff;
-  color: #0d6efd;
+  background: #0d6efd;
+  color: #fff;
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.2);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
 }
 
 .carousel-nav.disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
-  transform: scale(0.95);
-}
-
-.carousel-nav svg {
-  transition: transform 0.2s ease;
-}
-
-.carousel-nav:hover:not(.disabled) svg {
-  transform: scale(1.1);
 }
 
 /* ===== TEMPLATE CARDS ===== */
@@ -117,7 +106,7 @@
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
   height: 100%;
@@ -126,8 +115,8 @@
 }
 
 .template-card-inner:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
   border-color: rgba(13, 110, 253, 0.2);
 }
 
@@ -153,16 +142,12 @@
 /* ===== OVERLAY ===== */
 .template-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.65) 0%,
     rgba(0, 0, 0, 0.4) 100%
   );
-  backdrop-filter: blur(px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,14 +160,12 @@
 }
 
 .preview-btn {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: none !important;
-  background: #2563eb !important; /* Azul elegante */
+  background: #2563eb !important;
   color: #fff !important;
   font-weight: 600 !important;
   font-size: 0.85rem !important;
   padding: 0.6rem 1.2rem !important;
-  backdrop-filter: blur(10px);
+  border-radius: 10px !important;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -191,13 +174,9 @@
 }
 
 .preview-btn:hover {
-  background: #1e4db7 !important; /* Azul más oscuro */
+  background: #1e4db7 !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.preview-btn svg {
-  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== CONTENT ===== */
@@ -214,7 +193,6 @@
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 0.5rem;
-  line-height: 1.3;
 }
 
 .template-description {
@@ -237,130 +215,7 @@
 .templates-cta .btn-outline-primary:hover {
   background-color: #0d6efd !important;
   border-color: #0d6efd !important;
+  color: #fff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
-}
-
-/* ===== RESPONSIVE OVERRIDES ===== */
-
-/* Mobile */
-@media (max-width: 767px) {
-  .templates-carousel-container {
-    padding: 0 20px;
-  }
-
-  .carousel-nav {
-    width: 40px;
-    height: 40px;
-  }
-
-  .template-content {
-    padding: 1rem;
-  }
-
-  .template-name {
-    font-size: 1rem;
-  }
-
-  .template-description {
-    font-size: 0.85rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
-  }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-  .templates-carousel-container {
-    padding: 0 40px;
-  }
-
-  .carousel-nav {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  .templates-carousel-container {
-    padding: 0 60px;
-  }
-}
-
-/* Large Desktop */
-@media (min-width: 1200px) {
-  .section-title {
-    font-size: 2.5rem;
-  }
-
-  .section-subtitle {
-    font-size: 1.2rem;
-  }
-}
-
-/* ===== CAROUSEL LIBRARY OVERRIDES ===== */
-.react-multi-carousel-list {
-  position: static !important;
-}
-
-.react-multi-carousel-track {
-  padding: 20px 0 !important;
-  display: flex !important;
-  align-items: stretch !important;
-}
-
-.react-multi-carousel-item {
-  display: flex !important;
-  align-items: stretch !important;
-  min-width: 250px; /* asegura ancho mínimo */
-  box-sizing: border-box;
-}
-
-/* Ocultar botones por defecto de la librería */
-.react-multi-carousel-arrow {
-  display: none !important;
-}
-
-/* ===== ACCESSIBILITY ===== */
-@media (prefers-reduced-motion: reduce) {
-  .template-card-inner {
-    transition: none;
-  }
-
-  .template-image {
-    transition: none;
-  }
-
-  .template-overlay {
-    transition: none;
-  }
-
-  .carousel-nav {
-    transition: none;
-  }
-}
-
-/* Focus states */
-.carousel-nav:focus,
-.preview-btn:focus {
-  outline: 2px solid #0d6efd;
-  outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .template-card-inner {
-    border: 2px solid #000000;
-  }
-
-  .carousel-nav {
-    border: 2px solid #000000;
-  }
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.25);
 }
