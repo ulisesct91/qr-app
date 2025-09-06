@@ -45,8 +45,10 @@
 }
 
 .templates-carousel-container {
-  overflow: visible !important;
-  padding: 0 60px;
+  overflow: hidden; /* evita desbordamiento */
+  padding: 0 40px; /* margen más limpio */
+  max-width: 1200px; /* centra y limita en pantallas grandes */
+  margin: 0 auto;
 }
 
 .template-carousel-item {
@@ -247,10 +249,6 @@
     padding: 0 20px;
   }
 
-  .carousel-button-group {
-    display: none; /* Ocultar botones en móvil */
-  }
-
   .carousel-nav {
     width: 40px;
     height: 40px;
@@ -314,11 +312,15 @@
 
 .react-multi-carousel-track {
   padding: 20px 0 !important;
+  display: flex !important;
+  align-items: stretch !important;
 }
 
 .react-multi-carousel-item {
   display: flex !important;
   align-items: stretch !important;
+  min-width: 250px; /* asegura ancho mínimo */
+  box-sizing: border-box;
 }
 
 /* Ocultar botones por defecto de la librería */

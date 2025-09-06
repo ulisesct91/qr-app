@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import "./FinalCTA.css";
 
 function FinalCTA() {
@@ -14,13 +14,24 @@ function FinalCTA() {
           Crea tu primer menú QR en minutos y ofrece una experiencia moderna a
           tus clientes.
         </p>
+
+        {/* Botón principal */}
         <Button
-          variant="primary"
+          variant="light"
           size="lg"
           className="px-5 py-3 fw-bold final-cta-button"
         >
           CREAR MI MENÚ GRATIS
         </Button>
+
+        {/* Logo debajo */}
+        <div className="cta-logo mt-4">
+          <img
+            src="/images/logos/logo-bg-blanco.png"
+            alt="QR Fácil MX"
+            className="cta-logo-img"
+          />
+        </div>
       </Container>
     </section>
   );
