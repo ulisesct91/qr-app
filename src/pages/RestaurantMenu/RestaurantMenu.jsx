@@ -22,11 +22,8 @@ function RestaurantMenu() {
   const TemplateComponent = templates[templateToUse] || templates["classic"];
 
   return (
-    <Container className="py-5">
-      <h1 className="mb-4 text-center">{restaurante.nombre}</h1>
-      <p className="text-center text-muted mb-5">{restaurante.tagline}</p>
-
-      <TemplateComponent productos={restaurante.productos} />
+    <Container className="">
+      <TemplateComponent productos={restaurante.productos} data={restaurante} />
     </Container>
   );
 }

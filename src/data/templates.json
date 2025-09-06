@@ -13,5 +13,10 @@
     "id": "elegant",
     "nombre": "Elegant",
     "descripcion": "Minimalista, premium"
+  },
+  {
+    "id": "minimal",
+    "nombre": "Minimalista",
+    "descripcion": "Minimalasdista"
   }
 ]
