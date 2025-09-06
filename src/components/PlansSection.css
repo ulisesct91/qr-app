@@ -1,0 +1,65 @@
+.plans-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.plans-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.plans-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.plan-card {
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.plan-featured {
+  border: 2px solid #0d6efd;
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+}
+
+.plan-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.plan-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.plan-benefits {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.benefit-item {
+  font-size: 0.95rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  color: #0d6efd;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
