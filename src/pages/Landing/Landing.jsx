@@ -1,39 +1,78 @@
+// Landing.jsx
 import React from "react";
-import { Link } from "react-router-dom";
-import demos from "../../data/demos.json";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import "./Landing.css";
 
 function Landing() {
   return (
-    <Container className="py-5">
-      <h1 className="text-center mb-4">
-        Descubre cómo se vería tu menú digital
-      </h1>
-      <p className="text-center text-muted mb-5">
-        Explora nuestros estilos de menús digitales y elige el que más se adapte
-        a tu restaurante.
-      </p>
+    <>
+      {/* NAVBAR */}
+      <header className="landing-header">
+        <Container fluid className="px-4">
+          <div className="d-flex align-items-center justify-content-between py-3">
+            <img
+              src="/images/logos/logo-lineal-negro.png"
+              alt="QR Fácil MX"
+              className="logo"
+            />
+            <Button
+              variant="primary"
+              size="lg"
+              className="fw-bold px-4 d-none d-md-block cta-button"
+            >
+              CREAR QR GRATIS
+            </Button>
+          </div>
+        </Container>
+      </header>
 
-      <Row>
-        {demos.map((demo) => (
-          <Col key={demo.id} xs={12} md={4} className="mb-4">
-            <Card className="h-100 shadow-sm">
-              <Card.Body className="d-flex flex-column justify-content-between">
-                <div>
-                  <Card.Title>{demo.nombre}</Card.Title>
-                  <Card.Text className="text-muted">{demo.tagline}</Card.Text>
+      {/* HERO */}
+      <section className="landing-hero">
+        <Container className="py-5">
+          <Row className="align-items-center min-vh-hero">
+            {/* Texto */}
+            <Col xs={12} lg={6} className="mb-5 mb-lg-0 pe-lg-5">
+              <div className="hero-content">
+                <h1 className="hero-title mb-4">
+                  Digitaliza tu Restaurante con{" "}
+                  <span className="text-primary">Códigos QR</span> Profesionales
+                </h1>
+
+                <p className="hero-subtext mb-4">
+                  Menús digitales elegantes que impresionan a tus clientes y
+                  aumentan tus ventas.
+                  <br />
+                  <span className="fw-medium">
+                    Sin apps, sin complicaciones.
+                  </span>
+                </p>
+
+                <div className="hero-actions">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="fw-bold px-5 py-3 mb-3 cta-button-primary"
+                  >
+                    CREAR MI MENÚ GRATIS
+                  </Button>
                 </div>
-                <div className="text-center mt-3">
-                  <Link to={`/demo/${demo.slug}`}>
-                    <Button variant="primary">Ver demo</Button>
-                  </Link>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+              </div>
+            </Col>
+
+            {/* Imagen */}
+            <Col xs={12} lg={6}>
+              <div className="hero-image-container text-center">
+                <img
+                  src="/images/landing/mockup-phone.png"
+                  alt="Menú digital profesional en smartphone"
+                  className="img-fluid phone-mockup"
+                />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
   );
 }
 
